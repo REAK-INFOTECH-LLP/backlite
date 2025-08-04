@@ -13,8 +13,8 @@ import (
 	"time"
 
 	"github.com/PuerkitoBio/goquery"
-	"github.com/mikestefanello/backlite/internal/task"
-	"github.com/mikestefanello/backlite/internal/testutil"
+	"github.com/reak-infotech-llp/backlite/internal/task"
+	"github.com/reak-infotech-llp/backlite/internal/testutil"
 )
 
 func TestHandler_Validation(t *testing.T) {

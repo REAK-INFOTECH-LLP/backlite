@@ -9,8 +9,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/mikestefanello/backlite/internal/task"
-	"github.com/mikestefanello/backlite/internal/testutil"
+	"github.com/reak-infotech-llp/backlite/internal/task"
+	"github.com/reak-infotech-llp/backlite/internal/testutil"
 )
 
 func TestDispatcher_Notify(t *testing.T) {

@@ -1,9 +1,9 @@
 ## Backlite: Type-safe, persistent, embedded task queues and background job runner w/ SQLite
 
-[![Go Report Card](https://goreportcard.com/badge/github.com/mikestefanello/backlite)](https://goreportcard.com/report/github.com/mikestefanello/backlite)
-[![Test](https://github.com/mikestefanello/backlite/actions/workflows/test.yml/badge.svg)](https://github.com/mikestefanello/backlite/actions/workflows/test.yml)
+[![Go Report Card](https://goreportcard.com/badge/github.com/reak-infotech-llp/backlite)](https://goreportcard.com/report/github.com/reak-infotech-llp/backlite)
+[![Test](https://github.com/reak-infotech-llp/backlite/actions/workflows/test.yml/badge.svg)](https://github.com/reak-infotech-llp/backlite/actions/workflows/test.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Go Reference](https://pkg.go.dev/badge/github.com/mikestefanello/backlite.svg)](https://pkg.go.dev/github.com/mikestefanello/backlite)
+[![Go Reference](https://pkg.go.dev/badge/github.com/reak-infotech-llp/backlite.svg)](https://pkg.go.dev/github.com/reak-infotech-llp/backlite)
 [![GoT](https://img.shields.io/badge/Made%20with-Go-1f425f.svg)](https://go.dev)
 [![Mentioned in Awesome Go](https://awesome.re/mentioned-badge.svg)](https://github.com/avelino/awesome-go)
 
@@ -72,7 +72,7 @@ This project is under active development, though all features outlined below are
 
 ## Installation
 
-Install by simply running: `go get github.com/mikestefanello/backlite`
+Install by simply running: `go get github.com/reak-infotech-llp/backlite`
 
 ## Features
 

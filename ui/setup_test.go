@@ -11,8 +11,8 @@ import (
 
 	"github.com/PuerkitoBio/goquery"
 	_ "github.com/mattn/go-sqlite3"
-	"github.com/mikestefanello/backlite/internal/task"
-	"github.com/mikestefanello/backlite/internal/testutil"
+	"github.com/reak-infotech-llp/backlite/internal/task"
+	"github.com/reak-infotech-llp/backlite/internal/testutil"
 )
 
 var (

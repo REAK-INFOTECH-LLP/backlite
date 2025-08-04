@@ -2,5 +2,5 @@
 
 Easily monitor your queues via the provided web UI.
 
-* [Instructions](https://github.com/mikestefanello/backlite?tab=readme-ov-file#web-ui)
-* [Screenshots](https://github.com/mikestefanello/backlite?tab=readme-ov-file#screenshots)
+* [Instructions](https://github.com/reak-infotech-llp/backlite?tab=readme-ov-file#web-ui)
+* [Screenshots](https://github.com/reak-infotech-llp/backlite?tab=readme-ov-file#screenshots)
