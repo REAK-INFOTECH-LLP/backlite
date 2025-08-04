@@ -1,4 +1,4 @@
-module github.com/mikestefanello/backlite
+module github.com/reak-infotech-llp/backlite
 
 go 1.23.0
 
