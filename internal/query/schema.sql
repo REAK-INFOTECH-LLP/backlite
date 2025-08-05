@@ -2,7 +2,7 @@ CREATE TABLE IF NOT EXISTS backlite_tasks (
     id text PRIMARY KEY,
     created_at integer NOT NULL,
     queue text NOT NULL,
-    task blob NOT NULL,
+    task BYTEA NOT NULL,
     wait_until integer,
     claimed_at integer,
     last_executed_at integer,
