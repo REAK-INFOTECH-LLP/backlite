@@ -7,9 +7,9 @@ func TestClaimTasks(t *testing.T) {
 	expected := `
 		UPDATE backlite_tasks
 		SET
-			claimed_at = ?,
+			claimed_at = $1,
 			attempts = attempts + 1
-		WHERE id IN (?,?,?)
+		WHERE id IN ($2,$3,$4)
 	`
 
 	if got != expected {
