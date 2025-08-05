@@ -17,7 +17,7 @@ CREATE TABLE IF NOT EXISTS backlite_tasks_completed (
     attempts integer NOT NULL,
     last_duration_micro integer,
     succeeded integer,
-    task blob,
+    task BYTEA,
     expires_at integer,
     error text
 );
