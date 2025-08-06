@@ -13,14 +13,14 @@ const selectTask = `
 	FROM 
 	    backlite_tasks
 	WHERE
-	    id = ?
+	    id = $1
 `
 
 const selectCompletedTask = `
 	SELECT
 	    id,
 		created_at,
-		queue text,
+		queue,
 		last_executed_at,
 		attempts,
 		last_duration_micro,
@@ -31,7 +31,7 @@ const selectCompletedTask = `
 	FROM
 	    backlite_tasks_completed 
 	WHERE
-	    id = ?
+	    id = $1
 `
 
 const selectRunningTasks = `
@@ -48,8 +48,8 @@ const selectRunningTasks = `
 	    backlite_tasks
 	WHERE
 	    claimed_at IS NOT NULL
-	LIMIT ?
-	OFFSET ?
+	LIMIT $1
+	OFFSET $2 
 `
 const selectCompletedTasks = `
 	SELECT
@@ -66,9 +66,9 @@ const selectCompletedTasks = `
 	FROM
 	    backlite_tasks_completed 
 	WHERE
-	    succeeded = ?
+	    succeeded = $1
 	ORDER BY
 	    last_executed_at DESC
-	LIMIT ?
-	OFFSET ?
+	LIMIT $2
+	OFFSET $3
 `
