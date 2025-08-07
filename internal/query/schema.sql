@@ -16,7 +16,7 @@ CREATE TABLE IF NOT EXISTS backlite_tasks_completed (
     last_executed_at BIGINT,
     attempts BIGINT NOT NULL,
     last_duration_micro BIGINT,
-    succeeded BIGINT,
+    succeeded BOOLEAN,
     task BYTEA,
     expires_at BIGINT,
     error text
