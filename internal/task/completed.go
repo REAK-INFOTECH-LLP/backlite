@@ -55,6 +55,12 @@ func (c *Completed) InsertTx(ctx context.Context, tx *sql.Tx) error {
 		expiresAt = &v
 	}
 
+	// convert boolean to int for db storage 
+	succeeded := 0 
+	if c.Succeeded {
+		succeeded = 1
+	}
+
 	_, err := tx.ExecContext(
 		ctx,
 		query.InsertCompletedTask,
@@ -64,7 +70,7 @@ func (c *Completed) InsertTx(ctx context.Context, tx *sql.Tx) error {
 		c.LastExecutedAt.UnixMilli(),
 		c.Attempts,
 		c.LastDuration.Microseconds(),
-		c.Succeeded,
+		succeeded,
 		c.Task,
 		expiresAt,
 		c.Error,
@@ -87,6 +93,7 @@ func GetCompletedTasks(ctx context.Context, db *sql.DB, query string, args ...an
 		var task Completed
 		var lastExecutedAt, createdAt int64
 		var expiresAt *int64
+		var succeededInt int64
 
 		err = rows.Scan(
 			&task.ID,
@@ -95,7 +102,7 @@ func GetCompletedTasks(ctx context.Context, db *sql.DB, query string, args ...an
 			&lastExecutedAt,
 			&task.Attempts,
 			&task.LastDuration,
-			&task.Succeeded,
+			&succeededInt,
 			&task.Task,
 			&expiresAt,
 			&task.Error,
@@ -107,6 +114,7 @@ func GetCompletedTasks(ctx context.Context, db *sql.DB, query string, args ...an
 
 		task.LastExecutedAt = time.UnixMilli(lastExecutedAt)
 		task.CreatedAt = time.UnixMilli(createdAt)
+		task.Succeeded = succeededInt == 1
 		task.LastDuration *= 1000
 
 		if expiresAt != nil {
