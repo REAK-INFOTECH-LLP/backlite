@@ -55,7 +55,7 @@ const selectCompletedTasks = `
 	SELECT
 	    id,
 		created_at,
-		queue text,
+		queue,
 		last_executed_at,
 		attempts,
 		last_duration_micro,
